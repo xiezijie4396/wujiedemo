@@ -13,7 +13,7 @@
 import { findApp } from '../app';
 import { ref } from 'vue'
 
-const target = findApp('vuevite')
+const target = findApp('reactvite')
 const url = ref(target.url)
 const name = ref(target.name)
 const alive = ref(target.alive)

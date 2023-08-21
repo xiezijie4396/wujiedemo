@@ -4,6 +4,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/child/vuevite/',
   plugins: [vue()],
   server: {
     port: 8004,
@@ -13,6 +14,6 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: path.join(__dirname, '../server/vuevite')
+    outDir: path.join(__dirname, '../server/child/vuevite')
   }
 })

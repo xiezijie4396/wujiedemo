@@ -1,27 +1,13 @@
 <script setup>
-import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router'
+import { appList } from './app';
 // 获取当前路由对象
 const route = useRoute();
 // 获取路由导航对象
 const router = useRouter();
-const appList = [
-  {
-    appName: 'vue2',
-    query: '/child/vue2/',
-  },
-  {
-    appName: 'vue3',
-    query: '/child/vue3/',
-  },
-  {
-    appName: 'vuevite',
-    query: '/child/vite/',
-  }
-]
 const toApp = (app) => {
   router.push({
-    path: `/${app.appName}`
+    path: `/${app.name}`
   });
 }
 </script>
@@ -31,7 +17,7 @@ const toApp = (app) => {
     v-for="(item, index) in appList"
     :key="index"
     @click="toApp(item)"
-  >{{ item.appName }}</button>
+  >{{ item.name }}</button>
   <router-view />
 </template>
 

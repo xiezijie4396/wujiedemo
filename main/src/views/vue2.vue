@@ -2,9 +2,20 @@
     <WujieVue
         width="100%"
         height="100%"
-        name="vue2"
-        :alive="true"
-        url="http://localhost:8002/child/vue2/"
+        :name="name"
+        :alive="alive"
+        :url="url"
         :sync="true"
     ></WujieVue>
 </template>
+
+<script setup>
+import { findApp } from '../app';
+import { ref } from 'vue'
+
+const target = findApp('vue2')
+const url = ref(target.url)
+const name = ref(target.name)
+const alive = ref(target.alive)
+
+</script>

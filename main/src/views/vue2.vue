@@ -1,0 +1,10 @@
+<template>
+    <WujieVue
+        width="100%"
+        height="100%"
+        name="vue2"
+        :alive="true"
+        url="http://localhost:8002/child/vue2/"
+        :sync="true"
+    ></WujieVue>
+</template>

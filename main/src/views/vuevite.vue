@@ -1,0 +1,10 @@
+<template>
+    <WujieVue
+        width="100%"
+        height="100%"
+        name="vuevite"
+        :alive="true"
+        url="http://localhost:8004/child/vuevite/"
+        :sync="true"
+    ></WujieVue>
+</template>

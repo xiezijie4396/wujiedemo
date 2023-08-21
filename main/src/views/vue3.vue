@@ -1,0 +1,10 @@
+<template>
+    <WujieVue
+        width="100%"
+        height="100%"
+        name="vue3"
+        :alive="true"
+        url="http://localhost:8003/child/vue3/"
+        :sync="true"
+    ></WujieVue>
+</template>

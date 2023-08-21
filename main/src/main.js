@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import WujieVue from "wujie-vue3";
+import router from './router/index'
 
-createApp(App).mount('#app')
+createApp(App).use(router).use(WujieVue).mount('#app')

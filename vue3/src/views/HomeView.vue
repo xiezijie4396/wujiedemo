@@ -1,17 +1,15 @@
 <template>
   <div class="home">
-    Vue3 !!!
+    Vue4 !!!
+    <MyButton>xxx</MyButton>
+    <MyInput>xxx</MyInput>
+    <MyInput>xxx</MyInput>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+  name: 'HomeView'
 }
 </script>

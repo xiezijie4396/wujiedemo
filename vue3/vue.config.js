@@ -1,5 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 const path = require('path')
+const Components = require('unplugin-vue-components/webpack')
 
 module.exports = defineConfig({
   publicPath: '/child/vue3/',
@@ -11,4 +12,21 @@ module.exports = defineConfig({
     }
   },
   outputDir: path.join('../server/child/vue3'),
+  configureWebpack: {
+    plugins: [
+      Components({
+        dts: true, // 是否需要自动生成components.d.ts
+        resolvers: [
+          (componentName) => {
+            if (componentName.startsWith("My")) {
+              return { 
+                name: componentName,
+                from: `xzjviteui/vite-ui`
+              };
+            }
+          },
+        ],
+      })
+    ],
+  }
 })

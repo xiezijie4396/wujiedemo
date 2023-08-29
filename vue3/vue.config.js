@@ -22,7 +22,7 @@ module.exports = defineConfig({
               const tName = componentName.slice(2).toLowerCase()
               return { 
                 name: componentName,
-                from: `xzjviteui/${tName}`
+                from: `xzjviteui/vite-ui`
               };
             }
           },

@@ -19,9 +19,10 @@ module.exports = defineConfig({
         resolvers: [
           (componentName) => {
             if (componentName.startsWith("My")) {
+              const tName = componentName.slice(2).toLowerCase()
               return { 
                 name: componentName,
-                from: `xzjviteui/vite-ui`
+                from: `xzjviteui/${tName}`
               };
             }
           },

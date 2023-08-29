@@ -8,8 +8,8 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    MyButton: typeof import('xzjviteui/vite-ui')['MyButton']
-    MyInput: typeof import('xzjviteui/vite-ui')['MyInput']
+    MyButton: typeof import('xzjviteui/button')['MyButton']
+    MyInput: typeof import('xzjviteui/input')['MyInput']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
